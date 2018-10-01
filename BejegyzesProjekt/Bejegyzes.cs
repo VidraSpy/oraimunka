@@ -11,17 +11,23 @@ namespace BejegyzesProjekt
 
         private string szerzo;
         private string tartalom;
-        private int likeok = 0;
-        private DateTime letrejott = DateTime.UtcNow.Date;
-        private DateTime szerkesztve = DateTime.UtcNow.Date;
+        private int likeok;
+        private DateTime letrejott;
+        private DateTime szerkesztve;
 
-        public Bejegyzes(string szerzo, string tartalom, int likeok, DateTime letrejott, DateTime szerkesztve)
+        public Bejegyzes()
+        {
+        szerzo = "";
+        tartalom = "";
+        likeok = 0;
+        letrejott = DateTime.UtcNow.Date;
+        szerkesztve = DateTime.UtcNow.Date;
+    }
+
+        public Bejegyzes(string szerzo, string tartalom)
         {
             this.szerzo = szerzo;
             this.tartalom = tartalom;
-            this.likeok = likeok;
-            this.letrejott = letrejott;
-            this.szerkesztve = szerkesztve;
         }
 
         public string Szerzo
@@ -31,35 +37,32 @@ namespace BejegyzesProjekt
                 return szerzo;
             }
         }
-        public string getTartalom
+        public string Tartalom
         {
             get
             {
                 return tartalom;
             }
-        }
-        public string setTartalom
-        {
             set
             {
                 tartalom = value;
             }
         }
-        public int getLikeok
+        public int Likeok
         {
             get
             {
                 return likeok;
             }
         }
-        public DateTime getLetrejott
+        public DateTime Letrejott
         {
             get
             {
                 return letrejott;
             }
         }
-        public DateTime getSzerkesztve
+        public DateTime Szerkesztve
         {
             get
             {
